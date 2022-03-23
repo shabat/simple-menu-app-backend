@@ -6,22 +6,23 @@
       "dishes": [
         {
           "name": "Pasta 1",
-          "price": 23.44,
-          "icon": "ramen_dining"
+          "icon": "ramen_dining",
+          "price": 23.46
         },
         {
           "name": "Pasta 2",
-          "price": 44.44,
-          "icon": "ramen_dining"
+          "icon": "ramen_dining",
+          "price": 44.44
         },
         {
           "name": "Pasta 3",
-          "price": 49.2,
-          "icon": "ramen_dining"
+          "icon": "ramen_dining",
+          "price": 49.2
         }
       ]
     },
-    "name": "Restaurant 1"
+    "name": "Restaurant 1",
+    "menuName": "Restaurant 1"
   },
   "Good place": {
     "id": 2,
@@ -31,7 +32,7 @@
         {
           "name": "Coffee",
           "icon": "local_cafe",
-          "price": 10.01
+          "price": 11.23
         },
         {
           "name": "Cake",
@@ -45,7 +46,7 @@
         }
       ]
     },
-    "name": "AAA",
+    "name": "Good place",
     "menuName": "Good place"
   },
   "Test restaurant": {
