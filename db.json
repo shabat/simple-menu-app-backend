@@ -23,34 +23,54 @@
     },
     "name": "Restaurant 1"
   },
-  "AAA": {
+  "Good place": {
     "id": 2,
     "menu": {
-      "name": "Tasty menu!!",
+      "name": "Tasty menu",
       "dishes": [
         {
-          "name": "N",
-          "icon": "local_dining",
-          "price": 33
+          "name": "Coffee",
+          "icon": "local_cafe",
+          "price": 10.01
         },
         {
-          "name": "sf",
+          "name": "Cake",
           "icon": "cake",
-          "price": 22
+          "price": 33.5
         },
         {
-          "name": "sdf",
+          "name": "Burger",
           "icon": "lunch_dining",
-          "price": 44.44
+          "price": 24.44
         }
       ]
     },
-    "name": "AAA"
+    "name": "AAA",
+    "menuName": "Good place"
   },
-  "Test 2": {
-    "id": 5
-  },
-  "Test 22": {
-    "id": 6
+  "Test restaurant": {
+    "id": 5,
+    "name": "Test 2",
+    "menu": {
+      "name": "New menu!",
+      "dishes": [
+        {
+          "name": "Soup",
+          "icon": "soup_kitchen",
+          "price": 22
+        },
+        {
+          "name": "Ramen",
+          "icon": "ramen_dining",
+          "price": 28.88
+        },
+        {
+          "name": "Burger with fries",
+          "icon": "fastfood",
+          "price": 44
+        }
+      ]
+    },
+    "menuName": "Test restaurant"
   }
 }

@@ -54,12 +54,20 @@ app.post('/restaurants', async (req, res) => {
 
 app.put('/restaurants/:id', async (req, res) => {
     try {
-        const restaurantExists = Object.keys(db.data).find(item => db.data[item].id === Number(req.params.id))
+        const restaurantExists = findRestaurantById(db.data, Number(req.params.id));
         if (!restaurantExists) {
             res.status(404)
             return res.send('Not found')
         }
-        db.data[restaurantExists].menu = req.body;
+        const restaurantName = req.body.restaurantName;
+        delete req.body.restaurantName;
+
+        restaurantExists.menuName = restaurantName
+        restaurantExists.menu = req.body;
+
+        if (restaurantName !== restaurantExists.name) {
+            delete Object.assign(db.data, {[restaurantName]: db.data[restaurantExists.name] })[restaurantExists.name];
+        }
 
         await db.write()
         res.status(200)
@@ -74,12 +82,12 @@ app.put('/restaurants/:id', async (req, res) => {
 
 app.delete('/restaurants/:id', async (req, res) => {
     try {
-        const restaurantExists = Object.keys(db.data).find(item => db.data[item].id === Number(req.params.id))
+        const restaurantExists = findRestaurantById(db.data, Number(req.params.id))
         if (!restaurantExists) {
             res.status(404)
             return res.send('Not found')
         }
-        delete db.data[restaurantExists];
+        delete db.data[restaurantExists.name];
         await db.write()
         res.send(204)
     } catch (err) {
@@ -87,3 +95,13 @@ app.delete('/restaurants/:id', async (req, res) => {
         res.send(err);
     }
 })
+
+const findRestaurantById = (data, id) => {
+    let result = null;
+    for (let key in data) {
+        if (data.hasOwnProperty(key) && data[key].id === id) {
+            result = data[key];
+        }
+    }
+    return result;
+}
