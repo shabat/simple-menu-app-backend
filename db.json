@@ -1,0 +1,56 @@
+{
+  "Restaurant 1": {
+    "id": 1,
+    "menu": {
+      "name": "Main Course",
+      "dishes": [
+        {
+          "name": "Pasta 1",
+          "price": 23.44,
+          "icon": "ramen_dining"
+        },
+        {
+          "name": "Pasta 2",
+          "price": 44.44,
+          "icon": "ramen_dining"
+        },
+        {
+          "name": "Pasta 3",
+          "price": 49.2,
+          "icon": "ramen_dining"
+        }
+      ]
+    },
+    "name": "Restaurant 1"
+  },
+  "AAA": {
+    "id": 2,
+    "menu": {
+      "name": "Tasty menu!!",
+      "dishes": [
+        {
+          "name": "N",
+          "icon": "local_dining",
+          "price": 33
+        },
+        {
+          "name": "sf",
+          "icon": "cake",
+          "price": 22
+        },
+        {
+          "name": "sdf",
+          "icon": "lunch_dining",
+          "price": 44.44
+        }
+      ]
+    },
+    "name": "AAA"
+  },
+  "Test 2": {
+    "id": 5
+  },
+  "Test 22": {
+    "id": 6
+  }
+}
