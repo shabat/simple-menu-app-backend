@@ -37,7 +37,10 @@ app.get('/restaurants/:id', async (req, res) => {
 
 app.post('/restaurants', async (req, res) => {
     try {
-        const newItemId = Math.max(...Object.keys(db.data).map(restaurantName => db.data[restaurantName].id)) + 1
+        let newItemId = Math.max(...Object.keys(db.data).map(restaurantName => db.data[restaurantName].id)) + 1;
+        console.log('newItemId', newItemId)
+        if (!newItemId || newItemId === -Infinity) newItemId = 1;
+
         db.data[req.body.name] = {
             id: newItemId
         }
